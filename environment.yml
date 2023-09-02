@@ -1,18 +1,32 @@
 name: rutgers
+channels:
+  - conda-forge
 dependencies:
+  - beautifulsoup4
+  - bokeh
+  - colorcet
+  - datashader
+  - dask
+  - geoviews
+  - holoviews
+  - hvplot
+  - jupyter
+  - jupyterlab
+  - lumen
+  - matplotlib
+  - networkx
   - nomkl
+  - numba
   - numpy
   - pandas
+  - param
+  - plotly
+  - pygithub
+  - panel
   - scipy
   - scikit-learn
-  - bokeh
-  - matplotlib
-  - hvplot
-  - panel
-  - dask
-  - numba
-  - jupyter
-  - pygithub
+  - seaborn
+  - pyyaml
   - pip
   - pip:
     - contest

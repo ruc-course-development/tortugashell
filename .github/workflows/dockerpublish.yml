@@ -23,4 +23,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: lnk2past/turtleshell:latest
+          tags: lnk2past/tortugashell:latest
