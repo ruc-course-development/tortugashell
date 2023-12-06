@@ -23,6 +23,7 @@ dependencies:
   - pygithub
   - scipy
   - scikit-learn
+  - streamz
   - pyyaml
   - pip
   - pip:
