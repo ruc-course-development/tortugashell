@@ -1,24 +1,23 @@
-name: rutgers
+name: base
 channels:
   - conda-forge
 dependencies:
-  - beautifulsoup4
   - bokeh
   - colorcet
   - datashader
-  - geopandas=0.14.1
-  - geoviews=1.11.0
+  - geopandas=1.0.1
+  - geoviews=1.12.0
   - gh
-  - holoviews=1.18.1
+  - holoviews=1.19.1
   - hvplot
   - jupyter
-  - jupyter_bokeh=3.0.7
+  - jupyter_bokeh=4.0.5
   - jupyterlab
   - matplotlib
   - networkx
   - numpy
   - pandas
-  - panel=1.3.1
+  - panel=1.4.5
   - plotly
   - pygithub
   - scipy
