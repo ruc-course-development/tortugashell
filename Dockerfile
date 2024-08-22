@@ -1,4 +1,6 @@
-FROM mambaorg/micromamba:1.5.0
+FROM mambaorg/micromamba:1.5.8-bookworm-slim
+
+ENV MAMBA_ROOT_PREFIX=/opt/conda
 
 COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yml /tmp/environment.yml
 
