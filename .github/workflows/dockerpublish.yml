@@ -22,7 +22,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          build-args: |
-            MAMBA_USER=root
           push: true
-          tags: lnk2past/tortugashell:latest
+          tags:
+            - lnk2past/tortugashell:latest

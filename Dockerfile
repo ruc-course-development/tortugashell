@@ -1,14 +1,16 @@
-FROM mambaorg/micromamba:1.5.8-bookworm-slim
-
-COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yml /tmp/environment.yml
-
-RUN micromamba install -y -n base -f /tmp/environment.yml && \
-    micromamba clean --all --yes
-
-USER root
+FROM ghcr.io/astral-sh/uv:bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git openssh-server \
+    sudo openssh-server git vim \
     && rm -rf /var/lib/apt/lists/*
 
-USER $MAMBA_USER
+RUN useradd --create-home --shell /bin/bash vizuser
+RUN usermod -aG sudo vizuser
+RUN echo 'vizuser:vizuser' | chpasswd
+
+USER vizuser
+
+WORKDIR /home/vizuser
+
+COPY pyproject.toml pyproject.toml 
+COPY uv.lock uv.lock 
